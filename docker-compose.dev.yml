@@ -1,0 +1,19 @@
+services:
+  qucore_mvp_frontend:
+    build: .
+    env_file:
+      - .env
+      - .env.prod
+    container_name: client
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    command: npm run dev
+    ports:
+      - '3000:3000'
+    networks: [qucore_mvp_network]
+
+networks:
+  qucore_mvp_network:
+    external: true
