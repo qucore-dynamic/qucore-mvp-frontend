@@ -1,0 +1,52 @@
+@use '../../../app/variables.scss' as vars;
+
+.Scripts {
+  &_btn {
+    background: linear-gradient(35deg, vars.$spec-txt 0%, rgba(79, 87, 184, 1) 100%);
+    color: vars.$o-txt;
+    transition:
+      transform 0.15s ease-in-out,
+      box-shadow 0.15s ease-in-out;
+
+    @media (hover: hover) {
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px 5px vars.$spec-txt;
+      }
+    }
+
+    &:active {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px 5px vars.$spec-txt;
+    }
+  }
+}
+
+@media screen and (min-height: 110.313rem) {
+  .Scripts {
+    justify-content: center;
+
+    &_content {
+      height: 100%;
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: 56.25rem) {
+  .Scripts {
+    &_content {
+      width: 100%;
+      gap: 1.563rem;
+    }
+
+    &_btn {
+      margin-inline: 9.75%;
+      padding-inline: 10%;
+    }
+
+    &_footer {
+      padding-inline: 10%;
+    }
+  }
+}
