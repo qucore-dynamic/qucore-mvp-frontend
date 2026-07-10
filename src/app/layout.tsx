@@ -39,9 +39,11 @@ const RootLayout = async ({ children }: LayoutT) => {
   return (
     <html lang='en'>
       <body
-        className={`${prosto.className} ${afacad.className} ${coda.className} ${prosto.variable} ${afacad.variable} ${coda.variable}`}
+        className={`${prosto.className} ${afacad.className} ${coda.className} ${prosto.variable} ${afacad.variable} ${coda.variable} bg-(--bg) text-(--txt) flex flex-col`}
       >
-        <main>{children}</main>
+        <main className='w-full flex items-center'>
+					{children}
+				</main>
       </body>
     </html>
   )
