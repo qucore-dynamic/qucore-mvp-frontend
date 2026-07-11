@@ -5,14 +5,14 @@ import Tabs from '@components-pages/home/Tabs'
 
 const Home = () => {
   return (
-    <>
+    <div className='flex w-full h-screen overflow-hidden'>
       <Scripts />
 
-      <div className='bg-(--bg) w-[75vw] h-screen flex flex-col justify-center items-center relative'>
+      <div className='flex-1 bg-(--bg) h-full flex flex-col justify-center items-center relative'>
         <Tabs />
         <Panel />
       </div>
-    </>
+    </div>
   )
 }
 
