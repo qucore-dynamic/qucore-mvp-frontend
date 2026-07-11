@@ -1,12 +1,74 @@
 @use '../../../app/variables.scss' as vars;
 
+.Panel {
+  &_img {
+    opacity: 1;
+    transition:
+      opacity 0.15s ease-in-out,
+      transform 0.15s ease-in-out;
+
+    &-hov {
+      opacity: 0;
+      transform: scale(1);
+      transition:
+        opacity 0.15s ease-in-out,
+        transform 0.15s ease-in-out;
+    }
+  }
+
+  &_btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (hover: hover) {
+      &:hover {
+        .Panel_img {
+          transform: scale(1.2);
+          opacity: 0;
+        }
+
+        .Panel_img-hov {
+          opacity: 1;
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    &:active {
+      .Panel_img {
+        transform: scale(1.2);
+        opacity: 0;
+      }
+
+      .Panel_img-hov {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+    }
+
+    .Panel_img-curr {
+      opacity: 1;
+
+      & ~ .Panel_img {
+        opacity: 0;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 56.25rem) {
   .Panel {
     padding-inline: 1.25rem;
     gap: 1.875rem;
 
     &_img {
-      width: 1.25rem;
+      height: 1.25rem;
+
+      &-hov {
+        height: 1.25rem;
+      }
     }
   }
 }
@@ -16,7 +78,11 @@
     gap: 1.25rem;
 
     &_img {
-      width: 0.938rem;
+      height: 0.938rem;
+
+      &-hov {
+        height: 0.938rem;
+      }
     }
   }
 }
@@ -28,7 +94,11 @@
     width: 55%;
 
     &_img {
-      width: 1.25rem;
+      height: 1.25rem;
+
+      &-hov {
+        height: 1.25rem;
+      }
     }
   }
 }

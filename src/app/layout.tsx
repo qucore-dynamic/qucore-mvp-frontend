@@ -5,6 +5,9 @@ import './variables.scss'
 // Font
 import { Prosto_One, Afacad, Coda } from 'next/font/google'
 
+// Components
+import { TabProvider } from '@components/TabProvider'
+
 // Types
 import type { Metadata } from 'next'
 import { LayoutT } from '@shared-types/layouts'
@@ -42,8 +45,8 @@ const RootLayout = async ({ children }: LayoutT) => {
         className={`${prosto.className} ${afacad.className} ${coda.className} ${prosto.variable} ${afacad.variable} ${coda.variable} bg-(--bg) text-(--txt) flex flex-col`}
       >
         <main className='w-full flex items-center'>
-					{children}
-				</main>
+          <TabProvider>{children}</TabProvider>
+        </main>
       </body>
     </html>
   )
