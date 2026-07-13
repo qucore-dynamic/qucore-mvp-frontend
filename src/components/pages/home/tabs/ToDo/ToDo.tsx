@@ -1,8 +1,10 @@
+'use client'
+
 // Styles
 import './ToDo.scss'
 
-const ToDo = () => {
-  return <div>ToDo</div>
+const ToDoClient = () => {
+  return <div>ToDoClient</div>
 }
 
-export default ToDo
+export default ToDoClient

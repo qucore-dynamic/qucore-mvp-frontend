@@ -91,7 +91,7 @@
   .Panel {
     flex-direction: column;
     gap: 1.875rem;
-    width: 55%;
+    width: max-content;
 
     &_img {
       height: 1.25rem;

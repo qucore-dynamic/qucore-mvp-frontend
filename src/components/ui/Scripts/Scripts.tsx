@@ -8,7 +8,7 @@ const Scripts = () => {
   const currentYear = new Date().getFullYear()
 
   return (
-    <div className='Scripts bg-(--bl) border-r border-(--border) min-w-27.5 max-w-225 w-[29.25vw] h-screen flex flex-col justify-start items-center overflow-y-auto overflow-x-hidden'>
+    <div className='Scripts bg-(--bl) border-r border-(--border) min-w-27.5 max-w-225 w-[29.25vw] h-screen flex flex-col justify-start items-center overflow-y-auto overflow-x-hidden z-2'>
       <div className='Scripts_content flex flex-col justify-start items-center gap-12.5 py-12.5'>
         {scripts.map((script) => (
           <button
