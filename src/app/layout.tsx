@@ -6,7 +6,7 @@ import './variables.scss'
 import { Prosto_One, Afacad, Coda } from 'next/font/google'
 
 // Components
-import { TabProvider } from '@components/TabProvider'
+import { TabProvider } from '@components/shared/TabProvider'
 
 // Types
 import type { Metadata } from 'next'

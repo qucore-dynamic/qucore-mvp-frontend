@@ -3,6 +3,9 @@
 // Styles
 import './Panel.scss'
 
+// Components
+import FadeUpMotion from '@components/shared/FadeUpMotion'
+
 // Hooks
 import { useTabs } from '@hooks/useTabs'
 
@@ -13,7 +16,12 @@ const Panel = () => {
   const { activeTab, setActiveTab } = useTabs()
 
   return (
-    <div className='Panel min-w-17.5 bg-(--bl) border border-(--border) rounded-[20px] absolute bottom-[6.65%] px-11.25 py-3.75 flex justify-center items-center gap-10'>
+    <FadeUpMotion
+      delay={0}
+      x={0}
+      y={100}
+      className='Panel min-w-17.5 bg-(--bl) border border-(--border) rounded-[20px] fixed bottom-[6.65%] px-11.25 py-3.75 flex justify-center items-center gap-10 z-2'
+    >
       <button
         title='Finances tab'
         onClick={() => setActiveTab(TabE.finances)}
@@ -67,7 +75,7 @@ const Panel = () => {
           className='Panel_img h-6.25 select-none pointer-events-none'
         />
       </button>
-    </div>
+    </FadeUpMotion>
   )
 }
 
