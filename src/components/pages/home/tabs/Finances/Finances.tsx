@@ -9,8 +9,8 @@ import FadeUpMotion from '@components/shared/FadeUpMotion'
 
 const FinancesClient = () => {
   const diff = '+ 5 000'
-  const oppMn = '+ 7 500'
-  const oppPl = '- 7 500'
+  const oppMn = '- 7 500'
+  const oppPl = '+ 7 500'
 
   return (
     <div className='w-full h-full flex justify-center items-start text-center'>
@@ -52,6 +52,23 @@ const FinancesClient = () => {
           y={0}
           className='Finances_cards mb-37.5 flex flex-col justify-center items-center gap-12.5'
         >
+          <div className='Finances_card bg-(--bl) border-2 border-(--border) rounded-[20px] flex flex-wrap justify-center items-center px-18.75 py-6.25 gap-12.5'>
+            <h3
+              className={`${oppPl.trim().startsWith('-') ? 'text-red-500' : 'text-green-500'} font-prosto text-[clamp(1rem,2.5vw,2.25rem)]`}
+            >
+              + 7 500 $
+            </h3>
+
+            <h4
+              title='Some message of the finance operation. Some message of the finance operation'
+              className='Finances_card-text w-full max-w-112.5 truncate font-afacad text-[clamp(0.75rem,2.5vw,1.25rem)]'
+            >
+              Some message of the finance operation. Some message of the finance operation
+            </h4>
+
+            <p className='font-coda text-[clamp(0.6rem,1.25vw,1rem)] text-(--o-txt)'>07.07.2026</p>
+          </div>
+
           <div className='Finances_card bg-(--bl) border-2 border-(--border) rounded-[20px] flex flex-wrap justify-center items-center px-18.75 py-6.25 gap-12.5'>
             <h3
               className={`${oppMn.trim().startsWith('-') ? 'text-red-500' : 'text-green-500'} font-prosto text-[clamp(1rem,2.5vw,2.25rem)]`}

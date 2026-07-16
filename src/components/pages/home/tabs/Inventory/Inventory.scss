@@ -1,1 +1,68 @@
 @use '../../../../../app/variables.scss' as vars;
+
+@media screen and (max-width: 96.25rem) {
+  .Inventory {
+    &_card-text {
+      max-width: 18.75rem;
+    }
+  }
+}
+
+@media screen and (max-width: 77.5rem) {
+  .Inventory {
+    &_cards {
+      width: 100%;
+    }
+
+    &_card {
+      row-gap: 0.938rem;
+      flex-direction: column;
+
+      &-text {
+        overflow: visible;
+        white-space: wrap;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 74.375rem) {
+  .Inventory {
+    &_header {
+      padding: 1.563rem;
+    }
+  }
+}
+
+@media screen and (max-width: 69.063rem) {
+  .Inventory {
+    &_header-content {
+      gap: 3.125rem;
+    }
+  }
+}
+
+@media screen and (max-width: 68.75rem) {
+  .Inventory {
+    &_header-content {
+      flex-direction: column;
+    }
+  }
+}
+
+@media screen and (max-width: 59.375rem) {
+  .Inventory {
+    &_card {
+      padding-inline: 1.563rem;
+    }
+  }
+}
+
+@media screen and (max-width: 20rem) {
+  .Inventory {
+    &_card {
+      padding-inline: 0.781rem;
+    }
+  }
+}
